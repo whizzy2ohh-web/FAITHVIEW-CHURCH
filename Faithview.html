@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FaithView Church | Reformation, Transformation, Impact</title>
-    <meta name="description" content="Welcome to FaithView Church in Lagos, Nigeria. A place of Reformation, Transformation, and Impact. Led by Rev. Abutu Maha. Join us for services and Bible training.">
-    <meta name="keywords" content="FaithView Church, Lagos church, Rev Abutu Maha, Christian reformation, Bible institute, church donations">
+    <meta name="description" content="Welcome to FaithView Church. A place of Reformation, Transformation, and Impact. Led by Rev. Abutu Maha.">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
+
     <style>
         /* --- CSS VARIABLES & RESET --- */
         :root {
@@ -26,44 +25,44 @@
             --text-slate: #8892b0;
             --white: #ffffff;
             --gold: #d4af37;
-            --spacing-small: 20px;
-            --spacing-medium: 40px;
-            --spacing-large: 80px;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--primary-navy);
             color: var(--text-slate);
-            line-height: 1.8;
+            line-height: 1.6;
             overflow-x: hidden;
         }
-        h1, h2, h3 {
+
+        h1, h2, h3, h4, h5 {
             color: var(--text-light);
             font-family: 'Playfair Display', serif;
-            margin-bottom: var(--spacing-small);
         }
-        h1 { font-size: 3rem; }
-        h2 { font-size: 2.5rem; }
-        h3 { font-size: 1.8rem; }
+
         a {
             text-decoration: none;
             color: inherit;
             transition: all 0.3s ease;
         }
+
         ul {
             list-style: none;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 var(--spacing-medium);
+            padding: 0 20px;
         }
+
         .btn {
             display: inline-block;
             padding: 12px 28px;
@@ -76,68 +75,86 @@
             cursor: pointer;
             text-transform: uppercase;
             font-size: 0.9rem;
-            margin: var(--spacing-small) 0;
         }
+
         .btn:hover {
             background-color: var(--accent-oxblood);
             color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
+
         .btn-fill {
             background-color: var(--accent-oxblood);
             color: var(--white);
         }
+
         .btn-fill:hover {
             background-color: var(--accent-oxblood-light);
+            border-color: var(--accent-oxblood-light);
         }
+
         /* --- NAVIGATION --- */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            padding: var(--spacing-small) 0;
+            padding: 20px 0;
             background-color: rgba(10, 25, 47, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
             transition: padding 0.3s ease;
         }
+
         nav.scrolled {
             padding: 10px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
+
         .nav-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .logo {
             font-size: 1.8rem;
             font-weight: 800;
             color: var(--white);
+            letter-spacing: 1px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         .logo span {
             color: var(--accent-oxblood);
         }
+
         .nav-links {
             display: flex;
             gap: 30px;
         }
+
         .nav-links a {
             font-size: 0.9rem;
             font-weight: 600;
             color: var(--text-light);
             text-transform: uppercase;
         }
+
         .nav-links a:hover {
             color: var(--accent-oxblood);
         }
+
         .mobile-toggle {
             display: none;
             font-size: 1.5rem;
             color: var(--text-light);
             cursor: pointer;
         }
+
         /* --- HERO SECTION --- */
         #home {
             height: 100vh;
@@ -145,40 +162,64 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(128, 0, 32, 0.3)), url('https://via.placeholder.com/1920x1080?text=Church+Hero+Image'); /* Replace with real image */
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(128, 0, 32, 0.3)), url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             text-align: center;
         }
+
         .hero-content {
+            z-index: 2;
             max-width: 800px;
-            padding: var(--spacing-medium);
+            padding: 20px;
         }
+
         .hero-subtitle {
             color: var(--accent-oxblood);
             font-weight: 700;
             letter-spacing: 3px;
-            margin-bottom: var(--spacing-small);
+            margin-bottom: 20px;
             text-transform: uppercase;
         }
+
         .hero-title {
-            font-size: 3.5rem;
-            line-height: 1.2;
-            margin-bottom: var(--spacing-small);
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 700;
         }
+
         .hero-motto {
             font-size: 1.2rem;
             color: var(--text-slate);
-            margin-bottom: var(--spacing-medium);
+            margin-bottom: 40px;
+            font-style: italic;
         }
+
+        .motto-highlight {
+            color: var(--white);
+            font-weight: 600;
+            border-bottom: 2px solid var(--accent-oxblood);
+        }
+
         /* --- SECTIONS GENERAL --- */
         section {
-            padding: var(--spacing-large) 0;
+            padding: 100px 0;
         }
+
         .section-header {
-            margin-bottom: var(--spacing-medium);
+            margin-bottom: 60px;
             text-align: center;
         }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
         .section-header h2::after {
             content: '';
             display: block;
@@ -187,127 +228,509 @@
             background-color: var(--accent-oxblood);
             margin: 10px auto 0;
         }
+
+        .section-header p {
+            color: var(--accent-oxblood);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
         /* --- ABOUT --- */
         #about {
             background-color: var(--white);
             color: var(--primary-navy);
         }
+
+        #about h2, #about h3, #about h4 {
+            color: var(--primary-navy);
+        }
+
         #about p {
             color: #444;
         }
+
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-medium);
+            gap: 50px;
             align-items: center;
         }
+
+        .about-image {
+            position: relative;
+        }
+
         .about-image img {
             width: 100%;
             border-radius: 8px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 20px 20px 0px var(--accent-oxblood);
         }
-        /* --- Add Services Section --- */
-        #services {
+
+        /* --- MISSION & VISION (Cards) --- */
+        #mission-vision {
             background-color: var(--secondary-navy);
         }
-        .services-list {
-            list-style-type: disc;
-            padding-left: var(--spacing-medium);
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
-        /* --- Other sections similarly refined with increased spacing, removed clutter --- */
-        /* (Abbreviated for brevity; full refinements applied in code) */
+
+        .mv-card {
+            background-color: var(--primary-navy);
+            padding: 40px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            border-top: 4px solid var(--accent-oxblood);
+        }
+
+        .mv-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .mv-icon {
+            font-size: 2.5rem;
+            color: var(--accent-oxblood);
+            margin-bottom: 20px;
+        }
+
+        .mv-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- FBI (FaithView Bible Institute) --- */
+        #fbi {
+            background-color: var(--white);
+            color: var(--primary-navy);
+            position: relative;
+        }
+        
+        #fbi h2 { color: var(--primary-navy); }
+        #fbi p { color: #555; }
+
+        .fbi-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .fbi-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .fbi-feature {
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .fbi-feature h4 {
+            color: var(--accent-oxblood);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* --- CONFESSION --- */
+        #confession {
+            background: linear-gradient(rgba(128, 0, 32, 0.9), rgba(128, 0, 32, 0.9)), url('https://images.unsplash.com/photo-1507692049790-de58293a4697?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .confession-box {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 40px;
+            position: relative;
+        }
+
+        .confession-box::before {
+            content: '“';
+            font-family: serif;
+            font-size: 5rem;
+            position: absolute;
+            top: -30px;
+            left: 20px;
+            color: rgba(255,255,255,0.2);
+        }
+
+        .confession-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        /* --- DONATIONS --- */
+        #donations {
+            background-color: var(--primary-navy);
+        }
+
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .donation-card {
+            background-color: var(--secondary-navy);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .donation-card h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .bank-details {
+            background-color: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .bank-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 5px;
+        }
+
+        .bank-label {
+            color: var(--accent-oxblood);
+            font-weight: 700;
+        }
+
+        .bank-value {
+            color: var(--text-light);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #050d1a;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--secondary-navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--accent-oxblood);
+            transform: translateY(-5px);
+        }
+
+        .footer-info p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .copy {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.8rem;
+            color: #555;
+        }
+
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
             .about-grid {
                 grid-template-columns: 1fr;
             }
+
             .nav-links {
                 display: none;
-                flex-direction: column;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 width: 100%;
                 background-color: var(--primary-navy);
-                padding: var(--spacing-small) 0;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                border-bottom: 2px solid var(--accent-oxblood);
             }
+
             .nav-links.active {
                 display: flex;
             }
+
             .mobile-toggle {
                 display: block;
+            }
+            
+            .about-image {
+                margin-bottom: 30px;
             }
         }
     </style>
 </head>
 <body>
+
     <!-- NAVIGATION -->
-    <nav id="navbar" aria-label="Main navigation">
+    <nav id="navbar">
         <div class="container nav-content">
-            <a href="#home" class="logo" aria-label="FaithView Church logo">
-                <i class="fas fa-church"></i> FAITH<span>VIEW</span>
+            <a href="#" class="logo">
+                <i class="fas fa-church"></i>
+                FAITH<span>VIEW</span>
             </a>
-            <div class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+            <div class="mobile-toggle" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#services" onclick="toggleMenu()">Services</a></li>
                 <li><a href="#mission-vision" onclick="toggleMenu()">Mission & Vision</a></li>
                 <li><a href="#fbi" onclick="toggleMenu()">FBI</a></li>
+                <li><a href="#confession" onclick="toggleMenu()">Confession</a></li>
                 <li><a href="#donations" onclick="toggleMenu()">Giving</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="https://www.facebook.com/faithviewchurch" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
             </ul>
         </div>
     </nav>
+
     <!-- HERO SECTION -->
-    <header id="home" aria-labelledby="hero-title">
+    <header id="home">
         <div class="hero-content">
             <p class="hero-subtitle">Welcome to FaithView Church</p>
-            <h1 class="hero-title" id="hero-title">Reformation. Transformation. Impact.</h1>
-            <p class="hero-motto">Raising empowered believers to change the world through faith.</p>
-            <a href="#services" class="btn btn-fill">Plan Your Visit</a>
-            <a href="#donations" class="btn">Give Online</a>
+            <h1 class="hero-title">REFORMATION.<br>TRANSFORMATION.<br>IMPACT.</h1>
+            <p class="hero-motto">Raising a generation of believers who are <span class="motto-highlight">empowered by the Word</span> to change their world.</p>
+            <a href="#about" class="btn btn-fill">Join Us This Sunday</a>
+            <a href="#donations" class="btn" style="margin-left: 10px;">Give Online</a>
         </div>
     </header>
+
     <!-- ABOUT SECTION -->
     <section id="about">
         <div class="container">
             <div class="section-header">
+                <p>Who We Are</p>
                 <h2>About FaithView</h2>
             </div>
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="https://via.placeholder.com/600x400?text=Rev.+Abutu+Maha" alt="Rev. Abutu Maha leading a service at FaithView Church">
+                    <!-- Placeholder image for Church/Pastor - Replace with actual image -->
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Worship at FaithView">
                 </div>
                 <div class="about-text">
-                    <p>FaithView Church is a family dedicated to reformation, transformation, and impact, led by Rev. Abutu Maha in Lagos, Nigeria.</p>
-                    <p>Our services equip you with biblical truth and empower community change.</p>
-                    <a href="#mission-vision" class="btn">Learn More</a>
+                    <h3>Welcome Home</h3>
+                    <br>
+                    <p>At FaithView Church, we are more than just a congregation; we are a family dedicated to the principles of <strong>Reformation, Transformation, and Impact</strong>. Led by <strong>Rev. Abutu Maha</strong>, our ministry is focused on bringing the unadulterated Word of God to our generation.</p>
+                    <br>
+                    <p>We believe that when you view life through the eyes of faith, everything changes. Our services are designed to equip you with biblical truth, ignite your spirit with passionate worship, and empower you to make a tangible difference in your community.</p>
+                    <br>
+                    <a href="#mission-vision" class="btn" style="border-color: var(--primary-navy); color: var(--primary-navy);">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- SERVICES SECTION (New for visitor priority) -->
-    <section id="services">
+
+    <!-- MISSION, VISION & VALUES -->
+    <section id="mission-vision">
         <div class="container">
             <div class="section-header">
-                <h2>Our Services</h2>
+                <p>Our Core</p>
+                <h2>Mission & Vision</h2>
             </div>
-            <p>Join us for inspiring worship and teaching. Service times:</p>
-            <ul class="services-list">
-                <li>Sunday Worship: 9 AM & 11 AM</li>
-                <li>Midweek Bible Study: Wednesday 7 PM</li>
-                <li>Prayer Meeting: Friday 6 PM</li>
-            </ul>
-            <a href="#contact" class="btn btn-fill">Get Directions</a>
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <i class="fas fa-bullseye mv-icon"></i>
+                    <h3>Our Mission</h3>
+                    <p>To reform mindsets through the teaching of the Word, transform lives through the power of the Spirit, and impact nations with the Kingdom culture.</p>
+                </div>
+                <div class="mv-card">
+                    <i class="fas fa-eye mv-icon"></i>
+                    <h3>Our Vision</h3>
+                    <p>To see a global church raised in power, walking in the fullness of their identity in Christ, and establishing God's will on earth as it is in heaven.</p>
+                </div>
+                <div class="mv-card">
+                    <i class="fas fa-bible mv-icon"></i>
+                    <h3>Our Values</h3>
+                    <p>Word-Centered Living, Spirit-Led Worship, Excellence in Ministry, Family & Community, and Global Evangelism.</p>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- Remaining sections (Mission-Vision, FBI, Confession, Donations, Footer) refined similarly with whitespace, consistency -->
-    <!-- (Full code would include them with similar updates: increased spacing, simplified text, better accessibility) -->
+
+    <!-- FAITHVIEW BIBLE INSTITUTE (FBI) -->
+    <section id="fbi">
+        <div class="container">
+            <div class="section-header">
+                <p>Equipping The Saints</p>
+                <h2>FBI: FaithView Bible Institute</h2>
+            </div>
+            <div class="fbi-container">
+                <p style="max-width: 700px; margin-bottom: 30px; font-size: 1.1rem;">
+                    The FaithView Bible Institute (FBI) is the training arm of our church designed to deepen your theological understanding and equip you for effective ministry. Whether you are called to the pulpit or the marketplace, FBI prepares you for <strong>Impact</strong>.
+                </p>
+                
+                <div class="fbi-features">
+                    <div class="fbi-feature">
+                        <h4>Foundation School</h4>
+                        <p>For new believers and those seeking to understand the fundamental pillars of the Christian faith.</p>
+                    </div>
+                    <div class="fbi-feature">
+                        <h4>School of Ministry</h4>
+                        <p>Advanced training for workforce members, leaders, and those sensing a call to ministry.</p>
+                    </div>
+                    <div class="fbi-feature">
+                        <h4>Leadership Academy</h4>
+                        <p>Strategic leadership principles for church administration and marketplace dominance.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 50px;">
+                    <a href="mailto:info@faithviewchurch.org?subject=FBI Registration Inquiry" class="btn btn-fill">Inquire About Registration</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONFESSION SECTION -->
+    <section id="confession">
+        <div class="container">
+            <div class="section-header">
+                <p style="color: rgba(255,255,255,0.7);">Speak The Word</p>
+                <h2 style="color: white;">Weekly Confession</h2>
+            </div>
+            <div class="confession-box">
+                <p class="confession-text">
+                    "I declare that I am a heavily defended city. My life is a testament of Reformation. I am Transformed by the renewing of my mind. Everywhere I go, I make Impact. I am the light of the world, a city set on a hill that cannot be hidden. The grace of God distinguishes me, and His power is at work in me. I am blessed, and I am a blessing!"
+                </p>
+                <h4 style="font-family: 'Montserrat', sans-serif; letter-spacing: 2px;">FAITHVIEW CHURCH</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- DONATIONS / GIVING -->
+    <section id="donations">
+        <div class="container">
+            <div class="section-header">
+                <p>Partner With Us</p>
+                <h2>Tithes & Offering</h2>
+            </div>
+            <div class="donation-grid">
+                <div class="donation-card">
+                    <i class="fas fa-university fa-3x" style="color: var(--accent-oxblood); margin-bottom: 20px;"></i>
+                    <h3>Bank Transfer</h3>
+                    <p>You can give directly via bank transfer using the details below:</p>
+                    
+                    <div class="bank-details">
+                        <div class="bank-row">
+                            <span class="bank-label">Bank Name:</span>
+                            <span class="bank-value">Zenith Bank (Example)</span>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">Account Name:</span>
+                            <span class="bank-value">FaithView Church</span>
+                        </div>
+                        <div class="bank-row" style="border: none;">
+                            <span class="bank-label">Account No:</span>
+                            <span class="bank-value">101XXXXXXX</span>
+                        </div>
+                    </div>
+                    <small style="color: #666; font-style: italic;">*Please verify account details at church before transfer</small>
+                </div>
+
+                <div class="donation-card">
+                    <i class="fas fa-mobile-alt fa-3x" style="color: var(--accent-oxblood); margin-bottom: 20px;"></i>
+                    <h3>Online Giving</h3>
+                    <p>Give securely using your card or mobile money.</p>
+                    <br>
+                    <button class="btn btn-fill" style="width: 100%;">Give Now (Paystack/Flutterwave)</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & SOCIALS -->
+    <footer id="contact">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/faithviewchurch" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@FaithViewChurch-International" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <div class="footer-info">
+                <h3>FAITHVIEW CHURCH</h3>
+                <p>Reformation | Transformation | Impact</p>
+                <p>Rev. Abutu Maha, Senior Pastor</p>
+                <br>
+                <p><i class="fas fa-map-marker-alt" style="color: var(--accent-oxblood);"></i> Lagos, Nigeria</p>
+            </div>
+
+            <div class="copy">
+                &copy; 2024 FaithView Church. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
     <script>
-        // Navbar and menu scripts remain, with added accessibility
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth Scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
